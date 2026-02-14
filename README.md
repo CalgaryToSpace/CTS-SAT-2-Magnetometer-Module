@@ -1,0 +1,1 @@
+# CTS-SAT-2-Magnetometer-Module
