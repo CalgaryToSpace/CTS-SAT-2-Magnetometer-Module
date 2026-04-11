@@ -3092,126 +3092,6 @@
 				)
 			)
 		)
-		(symbol "power:+3V3"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers hide)
@@ -3987,16 +3867,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 168.91) (xy 57.15 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "304cf364-bfa0-4443-a311-dcfcc5b00b60")
-	)
-	(wire
-		(pts
 			(xy 113.03 43.18) (xy 113.03 44.45)
 		)
 		(stroke
@@ -4307,13 +4177,13 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 168.91) (xy 57.15 168.91)
+			(xy 185.42 105.41) (xy 185.42 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "72260d7d-e9ae-464c-910e-62ec49e007dc")
+		(uuid "72f07495-bcb0-4e59-8a73-375e5ec08ec2")
 	)
 	(wire
 		(pts
@@ -4607,6 +4477,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 107.95) (xy 191.77 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aef58c1c-947b-4da6-b64c-57ceae55edda")
+	)
+	(wire
+		(pts
 			(xy 200.66 50.8) (xy 200.66 49.53)
 		)
 		(stroke
@@ -4837,7 +4717,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 170.18) (xy 54.61 170.18)
+			(xy 54.61 170.18) (xy 77.47 170.18)
 		)
 		(stroke
 			(width 0)
@@ -6542,6 +6422,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 185.42 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39f3b676-0e96-4239-8979-a59ed1e24d57")
+		(property "Reference" "#PWR01"
+			(at 185.42 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 185.42 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 185.42 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2442cc5-18e4-41f6-bb1b-761da9b49aa6")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 138.43 133.35 0)
 		(unit 1)
@@ -7963,7 +7908,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 66.04 168.91 270)
+		(at 77.47 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7972,7 +7917,7 @@
 		(fields_autoplaced yes)
 		(uuid "aa09688c-e233-4c98-b74f-d06877822196")
 		(property "Reference" "#PWR027"
-			(at 62.23 168.91 0)
+			(at 77.47 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7981,7 +7926,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 69.85 168.9101 90)
+			(at 80.01 168.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7990,7 +7935,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 168.91 0)
+			(at 77.47 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7999,7 +7944,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 168.91 0)
+			(at 77.47 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8008,7 +7953,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 66.04 168.91 0)
+			(at 77.47 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8795,73 +8740,6 @@
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
 					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 191.77 107.95 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e1eedff4-6855-49c5-b30e-078d0a2367ee")
-		(property "Reference" "#PWR01"
-			(at 195.58 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 187.96 107.9499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 191.77 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 191.77 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "71254a45-888d-401d-bf5f-e3777b9d3bb4")
-		)
-		(instances
-			(project ""
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR01")
 					(unit 1)
 				)
 			)
