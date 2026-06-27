@@ -1,0 +1,8 @@
+Updated 100nF1 from C to C8.
+Updated 100nF2 from C to C9.
+Updated 100nF3 from C to C10.
+Updated 100nF4 from C to C11.
+Updated 100nF5 from C to C12.
+Updated 1uF1 from C to C13.
+Updated 10uF1 from C to C14.
+Annotation complete.

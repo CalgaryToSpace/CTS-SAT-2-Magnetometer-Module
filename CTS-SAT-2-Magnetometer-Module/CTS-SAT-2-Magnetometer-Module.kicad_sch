@@ -3148,13 +3148,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power global)
+		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0)
+				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -3162,19 +3161,19 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
-				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3184,7 +3183,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3195,6 +3194,17 @@
 				)
 			)
 			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3205,7 +3215,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3216,22 +3226,10 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -3242,8 +3240,19 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 1.27) (xy 0 3.048)
 					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -3254,7 +3263,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 2.54 1.27) (xy -2.54 1.27)
 					)
 					(stroke
 						(width 0)
@@ -3264,12 +3273,10 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3277,6 +3284,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3543,8 +3568,8 @@
 		)
 	)
 	(rectangle
-		(start 30.48 25.4)
-		(end 133.35 72.39)
+		(start 46.99 19.05)
+		(end 149.86 66.04)
 		(stroke
 			(width 0)
 			(type default)
@@ -3555,8 +3580,8 @@
 		(uuid "14a418c4-cb46-4cda-b0d5-8ce1c0dad736")
 	)
 	(rectangle
-		(start 16.51 81.28)
-		(end 105.41 194.31)
+		(start 17.78 69.85)
+		(end 109.22 193.04)
 		(stroke
 			(width 0)
 			(type default)
@@ -3604,7 +3629,7 @@
 	)
 	(text "LDO"
 		(exclude_from_sim no)
-		(at 127.508 70.104 0)
+		(at 144.018 63.754 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -3616,7 +3641,7 @@
 	)
 	(text "MCU"
 		(exclude_from_sim no)
-		(at 96.52 191.516 0)
+		(at 97.79 188.214 0)
 		(effects
 			(font
 				(face "KiCad Font")
@@ -3641,7 +3666,7 @@
 		(uuid "f5a62de0-0d15-42d0-bc50-b0cc9f966378")
 	)
 	(junction
-		(at 49.53 170.18)
+		(at 50.8 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0a28ac7e-2371-492e-93f0-d8a5b279d597")
@@ -3653,37 +3678,31 @@
 		(uuid "10f523f5-3e06-40e2-9cf3-9a6b82b92142")
 	)
 	(junction
-		(at 54.61 184.15)
+		(at 55.88 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23180355-f9cf-46aa-b4c1-e1ad6aed7809")
 	)
 	(junction
-		(at 54.61 170.18)
+		(at 55.88 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "274af6a9-a9d5-47ce-b054-b2a4d0170d24")
 	)
 	(junction
-		(at 91.44 44.45)
+		(at 107.95 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "275bcade-9428-4371-89bf-d6d915976cf4")
 	)
 	(junction
-		(at 52.07 170.18)
+		(at 53.34 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e2247dc-6cfa-407b-bf27-6f2337043cbb")
 	)
 	(junction
-		(at 191.77 107.95)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "32f7fa31-2148-40bf-b95e-fdcf6b011e1c")
-	)
-	(junction
-		(at 71.12 104.14)
+		(at 72.39 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c3dded2-5378-4fcf-856c-9113fc823cb7")
@@ -3695,28 +3714,22 @@
 		(uuid "3cef7741-c84e-4ac7-85b4-c323cae38755")
 	)
 	(junction
-		(at 49.53 184.15)
+		(at 50.8 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ffad640-7b80-4de3-a2a0-f2841d136100")
 	)
 	(junction
-		(at 200.66 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "42a61b44-91dc-4ca7-8837-f3c880f0cc5f")
-	)
-	(junction
-		(at 205.74 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4809ec84-9151-478d-b4ec-a0e21bc9006c")
-	)
-	(junction
-		(at 60.96 184.15)
+		(at 62.23 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "490c5961-6b3d-4ec0-bf85-894b1d36a39a")
+	)
+	(junction
+		(at 204.47 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f8e5bb3-b860-47df-ba59-b65c95f9bf1e")
 	)
 	(junction
 		(at 256.54 127)
@@ -3725,10 +3738,16 @@
 		(uuid "5294b69e-55eb-41f1-a736-e30a5b26857e")
 	)
 	(junction
-		(at 60.96 44.45)
+		(at 77.47 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5ff822f5-606d-4377-93ad-fe1f6cb8339f")
+	)
+	(junction
+		(at 191.77 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "675d3c27-888d-4878-b30e-9bf1ab9ce404")
 	)
 	(junction
 		(at 247.65 54.61)
@@ -3737,31 +3756,13 @@
 		(uuid "80ecb371-63c1-446e-a167-da1bf28893e6")
 	)
 	(junction
-		(at 204.47 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "82193cf7-e5ba-4e91-8084-91f0d3c81197")
-	)
-	(junction
-		(at 194.31 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "829882c9-9e31-4003-966d-bc39ac2ba712")
-	)
-	(junction
-		(at 196.85 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "82d0135d-20c8-4fb0-8cc5-560887ce131e")
-	)
-	(junction
-		(at 78.74 101.6)
+		(at 80.01 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8c5037b4-a258-4122-8b53-b4f4cd01bd97")
 	)
 	(junction
-		(at 102.87 44.45)
+		(at 119.38 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8ddeb8d1-8b5c-4817-809d-4b4f13de2d4c")
@@ -3773,10 +3774,10 @@
 		(uuid "9b0c2214-9832-4282-a4d7-0e6840a94b01")
 	)
 	(junction
-		(at 196.85 102.87)
+		(at 72.39 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b2952bdd-f968-460e-820a-b4aeebb4a970")
+		(uuid "d0a5286d-3936-4d15-a581-527263f98201")
 	)
 	(junction
 		(at 254 54.61)
@@ -3785,16 +3786,10 @@
 		(uuid "d716aede-2a74-4778-8b4b-81aa206d25b5")
 	)
 	(junction
-		(at 254 100.33)
+		(at 72.39 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d9dff1b3-cd7c-4ea6-9ba0-d250800a6b8a")
-	)
-	(junction
-		(at 224.79 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dc118bac-023c-43a4-a999-b4a67581fb7d")
+		(uuid "df58a7b2-5eb0-4fd4-8236-afe7505c6176")
 	)
 	(junction
 		(at 227.33 45.72)
@@ -3803,28 +3798,34 @@
 		(uuid "e11144f5-4e66-4514-9171-2c072f3c73c4")
 	)
 	(junction
-		(at 55.88 44.45)
+		(at 72.39 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e1edb439-9d7c-4774-ac7f-51828cb993dc")
 	)
 	(junction
-		(at 41.91 184.15)
+		(at 43.18 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ea18a5f3-193a-4364-babf-76c54d67ee83")
 	)
 	(junction
-		(at 44.45 170.18)
+		(at 45.72 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f02b8b17-09bd-4c29-a0a4-b4553073f98a")
 	)
 	(junction
-		(at 46.99 170.18)
+		(at 48.26 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f18368c0-40a7-4aff-86d5-2a2be043e9cd")
+	)
+	(junction
+		(at 50.8 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffd560b8-f484-44d9-b412-04b3147e52d4")
 	)
 	(junction
 		(at 224.79 77.47)
@@ -3833,63 +3834,55 @@
 		(uuid "ffeb76f9-a51e-4117-820a-dca9fb8751a9")
 	)
 	(no_connect
-		(at 67.31 109.22)
+		(at 68.58 97.79)
 		(uuid "028236e9-7eb5-4944-bfdf-a22d2d6932c3")
 	)
 	(no_connect
-		(at 34.29 134.62)
+		(at 35.56 123.19)
 		(uuid "0287fd9c-8fbc-4512-9264-a534e98816bc")
 	)
 	(no_connect
-		(at 67.31 142.24)
+		(at 68.58 130.81)
 		(uuid "036c1ed1-f9c9-41a2-9948-5e034ca0c6fb")
 	)
 	(no_connect
-		(at 67.31 119.38)
+		(at 68.58 107.95)
 		(uuid "0560a106-71c6-45d3-93db-9cd9fcd925df")
 	)
 	(no_connect
-		(at 34.29 132.08)
-		(uuid "068221d1-0aba-4812-9a8a-ffca5c34961d")
-	)
-	(no_connect
-		(at 67.31 129.54)
-		(uuid "1d713b3b-77a3-404b-ad51-031b592b6b26")
-	)
-	(no_connect
-		(at 67.31 114.3)
+		(at 68.58 102.87)
 		(uuid "2551000e-ff69-4795-ad29-092685a6c990")
 	)
 	(no_connect
-		(at 67.31 132.08)
-		(uuid "25e78670-a6c0-4115-bb2e-75c22b176e6c")
-	)
-	(no_connect
-		(at 34.29 147.32)
+		(at 35.56 135.89)
 		(uuid "29e0b99b-a511-43fa-8539-8c6a3586ed00")
 	)
 	(no_connect
-		(at 34.29 149.86)
+		(at 35.56 138.43)
 		(uuid "2d469647-5128-4afa-b0ce-aea5b5973796")
 	)
 	(no_connect
-		(at 67.31 160.02)
+		(at 68.58 148.59)
 		(uuid "4709efbc-b3b7-454d-bed2-5cc1f52a820a")
 	)
 	(no_connect
-		(at 34.29 160.02)
+		(at 35.56 148.59)
 		(uuid "491fac29-38e0-4e12-ba1d-b9299638b294")
 	)
 	(no_connect
-		(at 34.29 162.56)
+		(at 68.58 118.11)
+		(uuid "5264a93e-4c1f-4dc2-95ee-43574f1d56d3")
+	)
+	(no_connect
+		(at 35.56 151.13)
 		(uuid "601e0fa2-0d1d-4603-bf19-ea0a0408fdcd")
 	)
 	(no_connect
-		(at 67.31 127)
+		(at 68.58 115.57)
 		(uuid "61a11860-c852-4ae2-962e-ddfd901522f1")
 	)
 	(no_connect
-		(at 67.31 121.92)
+		(at 68.58 110.49)
 		(uuid "62c83a96-7c69-442a-8364-a2cb863c5123")
 	)
 	(no_connect
@@ -3897,120 +3890,84 @@
 		(uuid "64461276-af41-4ba4-bc8c-54e3abe1b0aa")
 	)
 	(no_connect
-		(at 34.29 144.78)
+		(at 35.56 133.35)
 		(uuid "6ba56d96-d6c5-445b-a79a-e90da67521fa")
 	)
 	(no_connect
-		(at 154.94 74.93)
-		(uuid "75fb6ed1-9503-4687-8463-45b9e946bee5")
-	)
-	(no_connect
-		(at 67.31 152.4)
+		(at 68.58 140.97)
 		(uuid "763d2f61-ef54-4012-8219-f2aa4ef48213")
 	)
 	(no_connect
-		(at 52.07 91.44)
-		(uuid "765f9083-13fb-413e-b14e-2ef2ad6b0c42")
-	)
-	(no_connect
-		(at 67.31 116.84)
+		(at 68.58 105.41)
 		(uuid "7cb75cd7-1e90-4605-bc2c-9fbfd35b4464")
 	)
 	(no_connect
-		(at 34.29 157.48)
+		(at 68.58 120.65)
+		(uuid "8477d249-d7f6-488e-afd8-c000d2695ba6")
+	)
+	(no_connect
+		(at 35.56 146.05)
 		(uuid "84d41526-5e47-4c06-8e16-879c4111d058")
 	)
 	(no_connect
-		(at 67.31 144.78)
+		(at 68.58 133.35)
 		(uuid "8ed56b28-b2da-4fe3-95b8-95fd1a6a11ad")
 	)
 	(no_connect
-		(at 49.53 91.44)
-		(uuid "958436cc-6ea9-4ed0-a525-5ac5fab7aff0")
-	)
-	(no_connect
-		(at 34.29 127)
+		(at 35.56 115.57)
 		(uuid "9628c376-90f6-44df-8917-03a6cd80bcbc")
 	)
 	(no_connect
-		(at 67.31 124.46)
+		(at 68.58 113.03)
 		(uuid "9a419c3e-f113-487b-8d5b-7b31faceb0f5")
 	)
 	(no_connect
-		(at 67.31 106.68)
+		(at 68.58 95.25)
 		(uuid "a46a521c-dfb2-4c41-8e8b-3997fd966241")
 	)
 	(no_connect
-		(at 34.29 152.4)
+		(at 35.56 140.97)
 		(uuid "a5eed727-ce07-42bf-8380-6fd503e5c3cc")
 	)
 	(no_connect
-		(at 67.31 99.06)
+		(at 68.58 87.63)
 		(uuid "a9f77d3a-414b-45d9-ad7d-99f6904a7fee")
 	)
 	(no_connect
-		(at 237.49 57.15)
-		(uuid "ba76b075-37cf-4bc7-be87-7e7faa37eca6")
-	)
-	(no_connect
-		(at 34.29 139.7)
+		(at 35.56 128.27)
 		(uuid "bf6ddbe3-4b96-4c8f-a89e-46b6e0697e23")
 	)
 	(no_connect
-		(at 67.31 111.76)
-		(uuid "c0656403-c091-49d2-ba1d-02ee600e5f89")
-	)
-	(no_connect
-		(at 34.29 129.54)
-		(uuid "c33e2f7d-8997-4848-97e2-4fbeb1d10fb7")
-	)
-	(no_connect
-		(at 34.29 137.16)
+		(at 35.56 125.73)
 		(uuid "c8933f79-a486-44a7-afbc-8ea5003b6c80")
 	)
 	(no_connect
-		(at 67.31 137.16)
-		(uuid "d178e551-77e5-42e9-8d5c-3d3560cc7ee1")
-	)
-	(no_connect
-		(at 67.31 154.94)
+		(at 68.58 143.51)
 		(uuid "d1b490d0-e464-4d47-a4a6-a5e4cab51e07")
 	)
 	(no_connect
-		(at 67.31 134.62)
-		(uuid "d1fe113c-a884-4e0f-b6a7-402582d88688")
-	)
-	(no_connect
-		(at 67.31 147.32)
+		(at 68.58 135.89)
 		(uuid "d9406edd-0c99-4483-a5eb-0c92efc88d0e")
 	)
 	(no_connect
-		(at 34.29 154.94)
+		(at 35.56 143.51)
 		(uuid "e54d48e6-e796-41db-984a-af827bc69691")
 	)
 	(no_connect
-		(at 156.21 179.07)
-		(uuid "e59def64-ca44-4591-a43e-088a795d7d67")
-	)
-	(no_connect
-		(at 34.29 142.24)
+		(at 35.56 130.81)
 		(uuid "e79e26a1-a351-4f74-9956-9b0702995680")
 	)
 	(no_connect
-		(at 34.29 165.1)
+		(at 35.56 153.67)
 		(uuid "f04060df-d330-4223-82fa-8d816b4f87e3")
 	)
 	(no_connect
 		(at 251.46 102.87)
 		(uuid "f541ab58-a6ad-4ff1-b087-067a7aaf3ad3")
 	)
-	(no_connect
-		(at 149.86 161.29)
-		(uuid "faa02ce5-3956-44fb-a2be-8fef052dbad0")
-	)
 	(wire
 		(pts
-			(xy 194.31 62.23) (xy 212.09 62.23)
+			(xy 189.23 62.23) (xy 212.09 62.23)
 		)
 		(stroke
 			(width 0)
@@ -4020,7 +3977,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 170.18) (xy 46.99 170.18)
+			(xy 50.8 168.91) (xy 48.26 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4030,17 +3987,17 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 121.92) (xy 196.85 123.19)
+			(xy 76.2 153.67) (xy 72.39 153.67)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "04a72861-3202-4617-a92e-63116086dac4")
+		(uuid "04726c82-115e-44dd-a6cf-d3bee69ec9c4")
 	)
 	(wire
 		(pts
-			(xy 49.53 184.15) (xy 41.91 184.15)
+			(xy 50.8 182.88) (xy 43.18 182.88)
 		)
 		(stroke
 			(width 0)
@@ -4050,7 +4007,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 184.15) (xy 73.66 181.61)
+			(xy 74.93 182.88) (xy 74.93 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4070,7 +4027,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 184.15) (xy 49.53 185.42)
+			(xy 50.8 182.88) (xy 50.8 184.15)
 		)
 		(stroke
 			(width 0)
@@ -4080,7 +4037,17 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 49.53) (xy 60.96 49.53)
+			(xy 72.39 143.51) (xy 72.39 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c9fc03f-7b02-4f23-8aa1-1f08e1f9bbee")
+	)
+	(wire
+		(pts
+			(xy 81.28 43.18) (xy 77.47 43.18)
 		)
 		(stroke
 			(width 0)
@@ -4090,13 +4057,13 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 88.9) (xy 265.43 107.95)
+			(xy 100.33 139.7) (xy 100.33 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0f6e2005-b126-44cf-af3a-faa961f5d549")
+		(uuid "0e05a560-24e2-4bd6-8d28-57eb90ed24e7")
 	)
 	(wire
 		(pts
@@ -4110,7 +4077,27 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 184.15) (xy 29.21 181.61)
+			(xy 72.39 143.51) (xy 76.2 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11095cb1-3eec-4bba-bf0f-11d098701f64")
+	)
+	(wire
+		(pts
+			(xy 68.58 123.19) (xy 100.33 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "111d9b70-4a95-4468-a158-a57d07af5ff8")
+	)
+	(wire
+		(pts
+			(xy 30.48 182.88) (xy 30.48 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4137,6 +4124,16 @@
 			(type default)
 		)
 		(uuid "15032744-f5a9-4c4f-80f5-b00009f3b7a7")
+	)
+	(wire
+		(pts
+			(xy 100.33 130.81) (xy 100.33 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "150f097e-6484-4c66-880a-686c3efddbbe")
 	)
 	(wire
 		(pts
@@ -4170,43 +4167,13 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 184.15) (xy 54.61 184.15)
+			(xy 50.8 182.88) (xy 55.88 182.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1c7713f0-829f-4e88-9c7f-88885357a432")
-	)
-	(wire
-		(pts
-			(xy 254 100.33) (xy 257.81 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1cc950b0-5883-4083-a2a5-a0b8970d918c")
-	)
-	(wire
-		(pts
-			(xy 175.26 52.07) (xy 175.26 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d110f86-f7b4-4106-a1ab-89ab56d7b1e6")
-	)
-	(wire
-		(pts
-			(xy 175.26 60.96) (xy 175.26 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d1a0db8-2ebe-4457-8b12-bea57aa73ef4")
 	)
 	(wire
 		(pts
@@ -4250,7 +4217,27 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 171.45) (xy 44.45 171.45)
+			(xy 240.03 57.15) (xy 237.49 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21440152-1a12-42de-9f94-c26cadb3707a")
+	)
+	(wire
+		(pts
+			(xy 50.8 80.01) (xy 53.34 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2276bcb1-3f68-442a-83f8-ebac10eab8bd")
+	)
+	(wire
+		(pts
+			(xy 30.48 170.18) (xy 45.72 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4260,7 +4247,27 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 173.99) (xy 73.66 171.45)
+			(xy 72.39 142.24) (xy 72.39 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26eba21d-2f20-4e1b-9d8a-f594a7e56ac9")
+	)
+	(wire
+		(pts
+			(xy 72.39 133.35) (xy 72.39 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28d72d60-29c2-4e40-b851-74e27233c1bb")
+	)
+	(wire
+		(pts
+			(xy 74.93 172.72) (xy 74.93 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4280,7 +4287,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 173.99) (xy 49.53 173.99)
+			(xy 55.88 172.72) (xy 50.8 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4290,17 +4297,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 100.33) (xy 207.01 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2edec2a9-1a19-4898-824e-fef53647a480")
-	)
-	(wire
-		(pts
-			(xy 113.03 43.18) (xy 113.03 44.45)
+			(xy 129.54 36.83) (xy 129.54 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4310,7 +4307,17 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 59.69) (xy 200.66 59.69)
+			(xy 72.39 153.67) (xy 72.39 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "332768cc-3185-467c-a5fc-38c0e649b550")
+	)
+	(wire
+		(pts
+			(xy 189.23 59.69) (xy 212.09 59.69)
 		)
 		(stroke
 			(width 0)
@@ -4320,7 +4327,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 184.15) (xy 29.21 184.15)
+			(xy 43.18 182.88) (xy 30.48 182.88)
 		)
 		(stroke
 			(width 0)
@@ -4330,13 +4337,13 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 59.69) (xy 212.09 59.69)
+			(xy 87.63 143.51) (xy 87.63 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3850bb35-ee6c-42ed-a64f-32eee8ad0e07")
+		(uuid "37a2c6ea-3e9a-4557-ae96-442fc5e81e5f")
 	)
 	(wire
 		(pts
@@ -4350,17 +4357,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 123.19) (xy 196.85 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a0ed7be-b2a3-4cf6-89a5-8e9f3b83d111")
-	)
-	(wire
-		(pts
-			(xy 44.45 171.45) (xy 44.45 170.18)
+			(xy 45.72 170.18) (xy 45.72 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4370,17 +4367,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 88.9) (xy 254 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3df504e0-f08a-4e11-803c-950663df9644")
-	)
-	(wire
-		(pts
-			(xy 74.93 54.61) (xy 74.93 55.88)
+			(xy 91.44 48.26) (xy 91.44 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4390,7 +4377,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 171.45) (xy 52.07 171.45)
+			(xy 54.61 170.18) (xy 53.34 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4410,7 +4397,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 184.15) (xy 73.66 184.15)
+			(xy 62.23 182.88) (xy 74.93 182.88)
 		)
 		(stroke
 			(width 0)
@@ -4430,7 +4417,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 170.18) (xy 49.53 170.18)
+			(xy 53.34 168.91) (xy 50.8 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4440,7 +4427,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 184.15) (xy 60.96 184.15)
+			(xy 55.88 182.88) (xy 62.23 182.88)
 		)
 		(stroke
 			(width 0)
@@ -4450,7 +4437,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 171.45) (xy 54.61 170.18)
+			(xy 55.88 170.18) (xy 55.88 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4460,7 +4447,27 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 171.45) (xy 52.07 170.18)
+			(xy 31.75 118.11) (xy 35.56 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52212bad-c0f3-4e87-8fa0-380e82febc4d")
+	)
+	(wire
+		(pts
+			(xy 45.72 168.91) (xy 45.72 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53b45f4b-a9fe-4884-a4c6-7dc05184d77e")
+	)
+	(wire
+		(pts
+			(xy 53.34 170.18) (xy 53.34 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4470,7 +4477,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 173.99) (xy 60.96 172.72)
+			(xy 62.23 172.72) (xy 62.23 171.45)
 		)
 		(stroke
 			(width 0)
@@ -4480,13 +4487,33 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 62.23) (xy 102.87 64.77)
+			(xy 119.38 55.88) (xy 119.38 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5c4b7838-20a1-4a1d-8070-a871d0768a0d")
+	)
+	(wire
+		(pts
+			(xy 31.75 120.65) (xy 35.56 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cf9f987-15f7-4134-ab08-cbb507cefb0f")
+	)
+	(wire
+		(pts
+			(xy 33.02 80.01) (xy 50.8 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d57f54e-b0fa-46ef-ad20-3c170d3a8d60")
 	)
 	(wire
 		(pts
@@ -4510,23 +4537,13 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 170.18) (xy 44.45 170.18)
+			(xy 48.26 168.91) (xy 45.72 168.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "68cfc548-2b45-4afd-8918-e44a059b93a6")
-	)
-	(wire
-		(pts
-			(xy 208.28 49.53) (xy 208.28 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69760d52-8ce6-4058-88d0-2aedde6ce9c5")
 	)
 	(wire
 		(pts
@@ -4550,7 +4567,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 44.45) (xy 55.88 44.45)
+			(xy 69.85 38.1) (xy 72.39 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4567,16 +4584,6 @@
 			(type default)
 		)
 		(uuid "6d412ba4-db17-495a-bdcb-f51fba78b35b")
-	)
-	(wire
-		(pts
-			(xy 196.85 105.41) (xy 196.85 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70549153-f2da-4583-b10f-659f8bd67fd0")
 	)
 	(wire
 		(pts
@@ -4600,7 +4607,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 173.99) (xy 46.99 173.99)
+			(xy 43.18 172.72) (xy 48.26 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4610,7 +4617,17 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 104.14) (xy 83.82 104.14)
+			(xy 33.02 83.82) (xy 33.02 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74b6f4c0-523e-4ef3-9058-40f4ef126ca7")
+	)
+	(wire
+		(pts
+			(xy 72.39 92.71) (xy 85.09 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4630,26 +4647,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 49.53) (xy 194.31 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d0cf30c-77c1-473e-aaa9-569900271145")
-	)
-	(wire
-		(pts
-			(xy 191.77 123.19) (xy 196.85 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d91d41e-f19e-4d30-a18e-cb0198a5de24")
-	)
-	(wire
-		(pts
 			(xy 251.46 118.11) (xy 251.46 127)
 		)
 		(stroke
@@ -4660,7 +4657,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 184.15) (xy 60.96 181.61)
+			(xy 62.23 182.88) (xy 62.23 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4670,7 +4667,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 184.15) (xy 41.91 181.61)
+			(xy 43.18 182.88) (xy 43.18 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4680,7 +4677,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 100.33) (xy 205.74 100.33)
+			(xy 199.39 100.33) (xy 207.01 100.33)
 		)
 		(stroke
 			(width 0)
@@ -4700,7 +4697,17 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 170.18) (xy 52.07 170.18)
+			(xy 53.34 168.91) (xy 53.34 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "876cea56-26ff-487e-9c5a-3855bb628474")
+	)
+	(wire
+		(pts
+			(xy 55.88 168.91) (xy 53.34 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4710,7 +4717,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 44.45) (xy 102.87 44.45)
+			(xy 129.54 38.1) (xy 119.38 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4720,7 +4727,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 53.34) (xy 102.87 54.61)
+			(xy 119.38 46.99) (xy 119.38 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4740,7 +4747,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 97.79) (xy 71.12 104.14)
+			(xy 72.39 86.36) (xy 72.39 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4760,16 +4767,6 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 58.42) (xy 200.66 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93b1ea88-7c25-4d4d-a3ec-e1bfa383d389")
-	)
-	(wire
-		(pts
 			(xy 222.25 77.47) (xy 224.79 77.47)
 		)
 		(stroke
@@ -4780,7 +4777,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 44.45) (xy 55.88 46.99)
+			(xy 72.39 38.1) (xy 72.39 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4790,7 +4787,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 45.72) (xy 102.87 44.45)
+			(xy 119.38 39.37) (xy 119.38 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4810,7 +4807,17 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 107.95) (xy 265.43 107.95)
+			(xy 55.88 168.91) (xy 55.88 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a36f60b4-9d57-4ff5-842b-90fe87fdadad")
+	)
+	(wire
+		(pts
+			(xy 251.46 107.95) (xy 255.27 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4830,7 +4837,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 44.45) (xy 91.44 44.45)
+			(xy 101.6 38.1) (xy 107.95 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4850,23 +4857,13 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 173.99) (xy 46.99 170.18)
+			(xy 48.26 172.72) (xy 48.26 168.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "adf620ac-d040-4b91-b6af-f5f8adf77a17")
-	)
-	(wire
-		(pts
-			(xy 196.85 113.03) (xy 196.85 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae86471f-e25c-4682-9ccc-0363af514948")
 	)
 	(wire
 		(pts
@@ -4880,26 +4877,6 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 50.8) (xy 200.66 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af7e9309-c0ca-4daf-a218-8e1be0d87f52")
-	)
-	(wire
-		(pts
-			(xy 191.77 102.87) (xy 196.85 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3d6f0a3-69b3-4c43-b691-08757b53b627")
-	)
-	(wire
-		(pts
 			(xy 251.46 127) (xy 256.54 127)
 		)
 		(stroke
@@ -4910,7 +4887,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 173.99) (xy 49.53 170.18)
+			(xy 50.8 172.72) (xy 50.8 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4920,7 +4897,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 172.72) (xy 53.34 171.45)
+			(xy 54.61 171.45) (xy 54.61 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4940,7 +4917,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 101.6) (xy 83.82 101.6)
+			(xy 80.01 90.17) (xy 85.09 90.17)
 		)
 		(stroke
 			(width 0)
@@ -4950,7 +4927,17 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 173.99) (xy 29.21 171.45)
+			(xy 68.58 125.73) (xy 91.44 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cba35748-c55c-4cfa-b605-1efd1dacb1a8")
+	)
+	(wire
+		(pts
+			(xy 30.48 172.72) (xy 30.48 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4960,7 +4947,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 54.61) (xy 91.44 55.88)
+			(xy 107.95 48.26) (xy 107.95 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4970,13 +4957,23 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 54.61) (xy 55.88 55.88)
+			(xy 72.39 48.26) (xy 72.39 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d01faec1-6ccc-4cfc-be13-2bf507f3585a")
+	)
+	(wire
+		(pts
+			(xy 48.26 168.91) (xy 48.26 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d073ca93-c58d-4518-bad5-73d424400bfc")
 	)
 	(wire
 		(pts
@@ -4990,7 +4987,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 184.15) (xy 54.61 181.61)
+			(xy 55.88 182.88) (xy 55.88 180.34)
 		)
 		(stroke
 			(width 0)
@@ -5000,7 +4997,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 101.6) (xy 78.74 101.6)
+			(xy 68.58 90.17) (xy 80.01 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5010,13 +5007,23 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 88.9) (xy 205.74 92.71)
+			(xy 50.8 168.91) (xy 50.8 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d74fb68d-863d-48f5-aeb3-da117e8f83bc")
+		(uuid "d868e2d8-7d29-4561-a33a-7d20eb90c6f6")
+	)
+	(wire
+		(pts
+			(xy 92.71 168.91) (xy 92.71 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8a90f1b-0cc1-46a6-9e12-bd23b6ce5187")
 	)
 	(wire
 		(pts
@@ -5030,7 +5037,17 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 44.45) (xy 91.44 46.99)
+			(xy 71.12 100.33) (xy 68.58 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d95c65b1-9380-449d-8fca-b298e981994b")
+	)
+	(wire
+		(pts
+			(xy 107.95 38.1) (xy 107.95 40.64)
 		)
 		(stroke
 			(width 0)
@@ -5040,7 +5057,17 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 97.79) (xy 78.74 101.6)
+			(xy 68.58 153.67) (xy 72.39 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db2feded-9b45-43f6-8130-7e445f13f1d2")
+	)
+	(wire
+		(pts
+			(xy 80.01 86.36) (xy 80.01 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5060,7 +5087,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 104.14) (xy 71.12 104.14)
+			(xy 68.58 92.71) (xy 72.39 92.71)
 		)
 		(stroke
 			(width 0)
@@ -5070,7 +5097,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 44.45) (xy 91.44 44.45)
+			(xy 119.38 38.1) (xy 107.95 38.1)
 		)
 		(stroke
 			(width 0)
@@ -5080,7 +5107,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 102.87) (xy 204.47 102.87)
+			(xy 191.77 102.87) (xy 204.47 102.87)
 		)
 		(stroke
 			(width 0)
@@ -5090,17 +5117,17 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 58.42) (xy 194.31 62.23)
+			(xy 86.36 143.51) (xy 87.63 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e397d405-0389-458e-97f3-f19869df9ecc")
+		(uuid "e2d79041-bc09-4cc6-a649-bb53c19ebff6")
 	)
 	(wire
 		(pts
-			(xy 60.96 172.72) (xy 53.34 172.72)
+			(xy 62.23 171.45) (xy 54.61 171.45)
 		)
 		(stroke
 			(width 0)
@@ -5110,7 +5137,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 170.18) (xy 77.47 170.18)
+			(xy 55.88 168.91) (xy 92.71 168.91)
 		)
 		(stroke
 			(width 0)
@@ -5120,23 +5147,13 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 100.33) (xy 254 100.33)
+			(xy 251.46 100.33) (xy 257.81 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e797a56b-3d17-41cd-bb3e-5b26c1077d5f")
-	)
-	(wire
-		(pts
-			(xy 175.26 43.18) (xy 224.79 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e88daa01-db9f-4692-a061-607255d62a68")
 	)
 	(wire
 		(pts
@@ -5150,7 +5167,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 44.45) (xy 60.96 44.45)
+			(xy 72.39 38.1) (xy 77.47 38.1)
 		)
 		(stroke
 			(width 0)
@@ -5160,7 +5177,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 44.45) (xy 64.77 44.45)
+			(xy 77.47 38.1) (xy 81.28 38.1)
 		)
 		(stroke
 			(width 0)
@@ -5180,7 +5197,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 171.45) (xy 54.61 171.45)
+			(xy 74.93 170.18) (xy 55.88 170.18)
 		)
 		(stroke
 			(width 0)
@@ -5190,7 +5207,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 44.45) (xy 60.96 49.53)
+			(xy 77.47 38.1) (xy 77.47 43.18)
 		)
 		(stroke
 			(width 0)
@@ -5210,16 +5227,6 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 62.23) (xy 194.31 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4db886d-f0cb-47b3-b5d7-c4974d5da934")
-	)
-	(wire
-		(pts
 			(xy 224.79 45.72) (xy 227.33 45.72)
 		)
 		(stroke
@@ -5227,6 +5234,40 @@
 			(type default)
 		)
 		(uuid "f57482e0-f873-4dfa-bd82-a964b990e669")
+	)
+	(wire
+		(pts
+			(xy 91.44 140.97) (xy 91.44 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb4dc23b-598b-4756-b1d0-77e04e3866e9")
+	)
+	(global_label "SWDCLK"
+		(shape input)
+		(at 31.75 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "03e8067f-a4a7-4a0d-bd42-4115505790c0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.2658 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(global_label "SCL"
 		(shape input)
@@ -5276,9 +5317,9 @@
 			)
 		)
 	)
-	(global_label "RESET"
+	(global_label "DRDY"
 		(shape input)
-		(at 67.31 165.1 0)
+		(at 71.12 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5286,9 +5327,9 @@
 			)
 			(justify left)
 		)
-		(uuid "3dcd2a0d-e18a-4db4-8547-1655af317d68")
+		(uuid "2b42ca8f-7631-47d4-b0f3-aabcb0b5a23a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.0403 165.1 0)
+			(at 79.0038 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5326,7 +5367,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 83.82 104.14 0)
+		(at 85.09 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5336,7 +5377,7 @@
 		)
 		(uuid "48fba8cd-8a92-4416-872c-70d10c2a6b1b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.3128 104.14 0)
+			(at 91.5828 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5348,7 +5389,7 @@
 			)
 		)
 	)
-	(global_label "RESET"
+	(global_label "NRST"
 		(shape input)
 		(at 138.43 125.73 180)
 		(fields_autoplaced yes)
@@ -5360,7 +5401,7 @@
 		)
 		(uuid "55d6a257-5040-4c87-8dae-2e2361e83e6a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.6997 125.73 0)
+			(at 130.6672 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5470,7 +5511,7 @@
 	)
 	(global_label "SDA"
 		(shape input)
-		(at 83.82 101.6 0)
+		(at 85.09 90.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5480,7 +5521,7 @@
 		)
 		(uuid "91d36501-6ad3-42ab-a607-a425f316fd00")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.3733 101.6 0)
+			(at 91.6433 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5494,7 +5535,7 @@
 	)
 	(global_label "Vdd"
 		(shape input)
-		(at 53.34 44.45 180)
+		(at 69.85 38.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5504,7 +5545,7 @@
 		)
 		(uuid "9c96c019-ac42-4fae-b96e-2ca216857c1a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.9682 44.45 0)
+			(at 63.4782 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5513,6 +5554,54 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "DRDY"
+		(shape input)
+		(at 240.03 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a18c35c8-36e9-43f1-a156-ebb36f018a59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 247.9138 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "NRST"
+		(shape input)
+		(at 76.2 153.67 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b311b42f-b0ed-4c9d-8487-c6881a106bcc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.9628 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -5585,6 +5674,108 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "SWDIO"
+		(shape input)
+		(at 31.75 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f4539c2e-f3e0-4d9c-9902-9c8ed4cfd8d2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 22.8986 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 87.63 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "002ec360-d4a5-4fcc-aab5-18e313a3f156")
+		(property "Reference" "#PWR05"
+			(at 87.63 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 87.63 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 87.63 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0982ba5b-eb1a-46da-beba-6464fc98e634")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR05")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -5669,7 +5860,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 54.61 177.8 180)
+		(at 55.88 176.53 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5678,8 +5869,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0b947ad1-fe88-44ee-ad67-dafc29622de5")
-		(property "Reference" "100nF3"
-			(at 50.8 179.0701 0)
+		(property "Reference" "C"
+			(at 52.578 175.514 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5689,8 +5880,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 50.8 176.5301 0)
+		(property "Value" "100nF3"
+			(at 52.832 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5701,7 +5892,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 53.6448 173.99 0)
+			(at 54.9148 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5712,7 +5903,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 177.8 0)
+			(at 55.88 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5723,7 +5914,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 54.61 177.8 0)
+			(at 55.88 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5742,7 +5933,7 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "100nF3")
+					(reference "C")
 					(unit 1)
 				)
 			)
@@ -5750,7 +5941,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V0")
-		(at 205.74 88.9 0)
+		(at 72.39 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5759,9 +5950,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "10f513f2-a1d1-49a6-840b-e9129ffc1c34")
-		(property "Reference" "#PWR023"
-			(at 205.74 92.71 0)
+		(uuid "15c3670f-b9ca-4ac6-9916-22cffde420f5")
+		(property "Reference" "#PWR032"
+			(at 72.39 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5772,7 +5963,7 @@
 			)
 		)
 		(property "Value" "+3V0"
-			(at 205.74 83.82 0)
+			(at 72.39 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5782,7 +5973,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 205.74 88.9 0)
+			(at 72.39 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5793,7 +5984,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 88.9 0)
+			(at 72.39 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5804,7 +5995,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 205.74 88.9 0)
+			(at 72.39 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5815,168 +6006,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d7e9109e-4515-4e33-bd92-70349b5fbb35")
+			(uuid "e10fd443-aa14-42e4-a6e6-87da8af55967")
 		)
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 200.66 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "13c7fe31-4a28-4630-afa4-2c832c594f89")
-		(property "Reference" "#PWR06"
-			(at 200.66 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 201.168 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 200.66 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 200.66 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "401f1450-e69e-4f12-b8cf-fe1c7e1f1234")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 175.26 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "14b61cae-0048-4616-b2ac-e7a4adea9835")
-		(property "Reference" "#PWR03"
-			(at 175.26 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 175.26 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 175.26 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "aa863810-c422-4583-a79e-e96988d03b1c")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR03")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -5984,7 +6019,7 @@
 	)
 	(symbol
 		(lib_id "MCU_ST_STM32F0:STM32F072C8Tx")
-		(at 52.07 129.54 180)
+		(at 53.34 118.11 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5992,10 +6027,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "16752010-9532-4fc0-93c7-cd04fc5a29ee")
 		(property "Reference" "U3"
-			(at 47.3359 91.44 0)
+			(at 69.596 81.026 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6006,7 +6040,7 @@
 			)
 		)
 		(property "Value" "STM32F072C8Tx"
-			(at 47.3359 88.9 0)
+			(at 69.342 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6017,7 +6051,7 @@
 			)
 		)
 		(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
-			(at 64.77 93.98 0)
+			(at 66.04 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6029,7 +6063,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32f072c8.pdf"
-			(at 52.07 129.54 0)
+			(at 53.34 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6040,7 +6074,7 @@
 			)
 		)
 		(property "Description" "STMicroelectronics Arm Cortex-M0 MCU, 64KB flash, 16KB RAM, 48 MHz, 2.0-3.6V, 37 GPIO, LQFP48"
-			(at 52.07 129.54 0)
+			(at 53.34 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6205,86 +6239,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 205.74 96.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1a317f26-80c5-401d-a1e2-a4203b1f0870")
-		(property "Reference" "10k1"
-			(at 201.93 95.504 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 202.184 98.044 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 203.962 96.52 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 205.74 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ab41a6e7-ad44-443b-aa9a-57999367b7e1")
-		)
-		(pin "2"
-			(uuid "f4c4663c-d121-4a7b-bb87-d569c4de49ee")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "10k1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 78.74 93.98 0)
+		(at 80.01 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6294,7 +6249,7 @@
 		(dnp no)
 		(uuid "1b65bd39-9d34-4c48-8a1c-b86d2c7f8ceb")
 		(property "Reference" "R5"
-			(at 80.518 92.71 0)
+			(at 81.788 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6305,7 +6260,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 80.518 94.742 0)
+			(at 81.788 83.312 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6316,7 +6271,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 76.962 93.98 90)
+			(at 78.232 82.55 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6327,7 +6282,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 93.98 0)
+			(at 80.01 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6338,7 +6293,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 78.74 93.98 0)
+			(at 80.01 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6365,7 +6320,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 49.53 185.42 0)
+		(at 50.8 184.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6376,7 +6331,7 @@
 		(fields_autoplaced yes)
 		(uuid "1db4e8d5-114c-4dc6-9192-96243e02acce")
 		(property "Reference" "#PWR020"
-			(at 49.53 191.77 0)
+			(at 50.8 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6387,7 +6342,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 49.53 190.5 0)
+			(at 50.8 189.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6397,7 +6352,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 185.42 0)
+			(at 50.8 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6408,7 +6363,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 185.42 0)
+			(at 50.8 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6419,7 +6374,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 185.42 0)
+			(at 50.8 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6442,8 +6397,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 175.26 55.88 90)
+		(lib_id "Device:R")
+		(at 91.44 129.54 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6451,31 +6406,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "21c2896d-c49c-411b-aa77-acc94212536e")
-		(property "Reference" "D1"
-			(at 178.308 58.166 90)
+		(fields_autoplaced yes)
+		(uuid "1fcb9620-7202-4cfd-979c-e42f8f50f620")
+		(property "Reference" "R4"
+			(at 93.98 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "LED"
-			(at 178.308 60.706 90)
+		(property "Value" "3K3"
+			(at 93.98 130.8099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 175.26 55.88 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 89.662 129.54 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6486,7 +6442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 175.26 55.88 0)
+			(at 91.44 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6496,8 +6452,8 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 175.26 55.88 0)
+		(property "Description" "Resistor"
+			(at 91.44 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6508,23 +6464,23 @@
 			)
 		)
 		(pin "2"
-			(uuid "e17eddfa-8195-4c30-a083-01e8f5181e79")
+			(uuid "12e43414-e750-402d-a593-b2cd1e338b2a")
 		)
 		(pin "1"
-			(uuid "6c6ada1b-944d-4d57-aff0-6bd4c8874608")
+			(uuid "ef88d8d0-f80c-4c1c-9461-2e4ac358534a")
 		)
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "D1")
+					(reference "R4")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 91.44 50.8 0)
+		(lib_id "power:+3V0")
+		(at 129.54 36.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6533,31 +6489,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2a0f7212-b164-4209-83d6-24710a2c6efd")
-		(property "Reference" "C6"
-			(at 95.25 49.5299 0)
+		(uuid "2125cd84-7b31-41fe-9a9f-4647d47cde22")
+		(property "Reference" "#PWR01"
+			(at 129.54 40.64 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 95.25 52.0699 0)
+		(property "Value" "+3V0"
+			(at 129.54 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 92.4052 54.61 0)
+		(property "Footprint" ""
+			(at 129.54 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6568,7 +6523,164 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 50.8 0)
+			(at 129.54 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 129.54 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9c271927-fa9d-4746-98ba-8e08d20ccc09")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V0")
+		(at 224.79 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "24e1b11e-d80d-48b1-a614-b9896365a7ac")
+		(property "Reference" "#PWR031"
+			(at 224.79 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V0"
+			(at 224.79 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 224.79 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7ecf98c3-b5ea-401e-9c28-15fb50d6dcfc")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 107.95 44.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a0f7212-b164-4209-83d6-24710a2c6efd")
+		(property "Reference" "C6"
+			(at 111.76 43.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 111.76 45.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 108.9152 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6579,7 +6691,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 91.44 50.8 0)
+			(at 107.95 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6606,7 +6718,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 102.87 58.42 90)
+		(at 119.38 52.07 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6617,7 +6729,7 @@
 		(fields_autoplaced yes)
 		(uuid "2af37ec5-dad6-4514-a7a7-4e9231d1569d")
 		(property "Reference" "D2"
-			(at 106.68 58.7374 90)
+			(at 123.19 52.3874 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6628,7 +6740,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 106.68 61.2774 90)
+			(at 123.19 54.9274 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6639,7 +6751,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 102.87 58.42 0)
+			(at 119.38 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6650,7 +6762,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.87 58.42 0)
+			(at 119.38 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6661,7 +6773,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 102.87 58.42 0)
+			(at 119.38 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6688,7 +6800,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 102.87 64.77 0)
+		(at 119.38 58.42 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6699,7 +6811,7 @@
 		(fields_autoplaced yes)
 		(uuid "34f61e1c-7589-46fa-95f7-37b52e5f827a")
 		(property "Reference" "#PWR015"
-			(at 102.87 71.12 0)
+			(at 119.38 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6710,7 +6822,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 102.87 69.85 0)
+			(at 119.38 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6721,7 +6833,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 102.87 64.77 0)
+			(at 119.38 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6732,7 +6844,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.87 64.77 0)
+			(at 119.38 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6743,7 +6855,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 102.87 64.77 0)
+			(at 119.38 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6767,7 +6879,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 60.96 177.8 180)
+		(at 62.23 176.53 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6776,8 +6888,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "36fbbd2b-0f97-476c-93e9-8425840b6160")
-		(property "Reference" "100nF4"
-			(at 64.77 176.5299 0)
+		(property "Reference" "C"
+			(at 65.278 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6787,8 +6899,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "C"
-			(at 64.77 179.0699 0)
+		(property "Value" "100nF4"
+			(at 65.024 177.546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6799,7 +6911,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 59.9948 173.99 0)
+			(at 61.2648 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6810,7 +6922,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 177.8 0)
+			(at 62.23 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6821,7 +6933,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 60.96 177.8 0)
+			(at 62.23 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6840,165 +6952,7 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "100nF4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 194.31 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "38ea8743-3b01-4d42-97f2-a41d9803af51")
-		(property "Reference" "R3"
-			(at 189.738 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4k7"
-			(at 188.722 55.626 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 192.532 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 194.31 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3b7ff4bd-8f1a-45f4-bfda-2420e766ee0a")
-		)
-		(pin "2"
-			(uuid "768d837e-8ba2-4630-a8a7-3e40b1cf3633")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 208.28 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "39d489b0-f4b0-42f4-ae7c-b5e5536d610a")
-		(property "Reference" "#PWR07"
-			(at 208.28 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 208.28 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 208.28 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bd10c759-fd56-4191-aaf9-76d745d630ca")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR07")
+					(reference "C")
 					(unit 1)
 				)
 			)
@@ -7084,7 +7038,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 91.44 55.88 0)
+		(at 107.95 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7095,7 +7049,7 @@
 		(fields_autoplaced yes)
 		(uuid "3db2fe2f-0141-458f-b839-2f3d0f91f2c0")
 		(property "Reference" "#PWR013"
-			(at 91.44 62.23 0)
+			(at 107.95 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7106,7 +7060,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 60.96 0)
+			(at 107.95 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7117,7 +7071,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 55.88 0)
+			(at 107.95 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7128,7 +7082,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 55.88 0)
+			(at 107.95 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7139,7 +7093,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 55.88 0)
+			(at 107.95 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7162,8 +7116,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V0")
-		(at 254 88.9 0)
+		(lib_id "Device:R")
+		(at 208.28 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7172,30 +7126,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "49823adf-2d1d-4b92-aa99-3be6a9802922")
-		(property "Reference" "#PWR024"
-			(at 254 92.71 0)
-			(hide yes)
+		(uuid "44f63040-3882-47a4-8ba1-f4119a5820fe")
+		(property "Reference" "R1"
+			(at 210.82 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "+3V0"
-			(at 254 83.82 0)
+		(property "Value" "0"
+			(at 210.82 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 254 88.9 0)
+			(at 206.502 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7206,85 +7161,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 254 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cc6bdf56-c13f-4883-94b8-74d9ec5340a1")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 200.66 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4a6b2942-04b0-4d9d-8c9d-6f0b6d2e2229")
-		(property "Reference" "R4"
-			(at 202.438 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4k7"
-			(at 202.438 55.372 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 198.882 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 54.61 0)
+			(at 208.28 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7295,7 +7172,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 200.66 54.61 0)
+			(at 208.28 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7305,16 +7182,16 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "6587a349-0b5a-4858-ac74-68ac406f9101")
-		)
 		(pin "2"
-			(uuid "7d37e341-3233-447a-a59d-3c92999b04d2")
+			(uuid "6669b71f-fcc2-4d9f-b6ae-27d75ad87c9b")
+		)
+		(pin "1"
+			(uuid "387c26f9-c541-4004-91c2-872f451c24ce")
 		)
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "R4")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -7400,7 +7277,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 29.21 177.8 180)
+		(at 30.48 176.53 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7409,8 +7286,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "527b558f-bcac-47b8-96b9-2655e0b6cadf")
-		(property "Reference" "100nF1"
-			(at 25.146 179.578 0)
+		(property "Reference" "C"
+			(at 26.416 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7420,8 +7297,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 25.146 177.038 0)
+		(property "Value" "100nF1"
+			(at 26.67 177.546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7432,7 +7309,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 28.2448 173.99 0)
+			(at 29.5148 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7443,7 +7320,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 177.8 0)
+			(at 30.48 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7454,7 +7331,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 29.21 177.8 0)
+			(at 30.48 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7473,7 +7350,7 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "100nF1")
+					(reference "C")
 					(unit 1)
 				)
 			)
@@ -7481,7 +7358,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 102.87 49.53 0)
+		(at 119.38 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7492,7 +7369,7 @@
 		(fields_autoplaced yes)
 		(uuid "5593b144-25d6-481b-b9f0-c21ea24a7522")
 		(property "Reference" "R2"
-			(at 105.41 48.2599 0)
+			(at 121.92 41.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7503,7 +7380,7 @@
 			)
 		)
 		(property "Value" "3K3"
-			(at 105.41 50.7999 0)
+			(at 121.92 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7514,7 +7391,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 101.092 49.53 90)
+			(at 117.602 43.18 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7525,7 +7402,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.87 49.53 0)
+			(at 119.38 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7536,7 +7413,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 102.87 49.53 0)
+			(at 119.38 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7634,169 +7511,6 @@
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
 					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 175.26 46.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5ef02726-ed5e-4b6b-8228-7a3974409db9")
-		(property "Reference" "R1"
-			(at 178.308 45.974 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3K3"
-			(at 178.308 48.514 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 173.482 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 175.26 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "9eacedac-cb56-4d57-a804-5114ed257db7")
-		)
-		(pin "1"
-			(uuid "5b30ea75-ec3e-491d-9bb5-216db248c83f")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 196.85 118.11 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5fe1c244-61ea-40ee-bd05-b2d910230e4e")
-		(property "Reference" "D4"
-			(at 200.66 118.4274 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 200.66 120.9674 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 196.85 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 196.85 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 196.85 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9b5cbf0c-b27c-4b4f-8dea-1f9e3dfba55b")
-		)
-		(pin "2"
-			(uuid "379ead89-5efa-4514-8ad6-5a8adf00c674")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -8085,8 +7799,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 74.93 55.88 0)
+		(lib_id "power:+3V0")
+		(at 80.01 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8095,9 +7809,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "696a31d5-bab5-410c-9dfb-4212ffb6f481")
-		(property "Reference" "#PWR04"
-			(at 74.93 62.23 0)
+		(uuid "6766b3fd-6723-4929-a545-4e6a86405b56")
+		(property "Reference" "#PWR033"
+			(at 80.01 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8107,9 +7821,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 74.93 60.96 0)
-			(hide yes)
+		(property "Value" "+3V0"
+			(at 80.01 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8119,7 +7832,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 55.88 0)
+			(at 80.01 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8130,7 +7843,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 55.88 0)
+			(at 80.01 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 80.01 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6fc3c01f-60bf-473e-8b58-cb99d95251ea")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "696a31d5-bab5-410c-9dfb-4212ffb6f481")
+		(property "Reference" "#PWR04"
+			(at 91.44 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8141,7 +7933,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 74.93 55.88 0)
+			(at 91.44 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8413,7 +8205,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 196.85 124.46 0)
+		(at 191.77 123.19 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8424,7 +8216,7 @@
 		(fields_autoplaced yes)
 		(uuid "8a17ef38-6ec1-486e-9fb7-d27944c8ef9f")
 		(property "Reference" "#PWR018"
-			(at 196.85 130.81 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8435,7 +8227,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 196.85 129.54 0)
+			(at 191.77 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8445,7 +8237,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 196.85 124.46 0)
+			(at 191.77 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8456,7 +8248,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 124.46 0)
+			(at 191.77 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8467,7 +8259,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 196.85 124.46 0)
+			(at 191.77 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8579,7 +8371,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 71.12 93.98 0)
+		(at 72.39 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8589,7 +8381,7 @@
 		(dnp no)
 		(uuid "8b420a84-d627-4136-ad8c-e83aed996599")
 		(property "Reference" "R6"
-			(at 72.898 92.71 0)
+			(at 74.168 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8600,7 +8392,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 72.898 94.742 0)
+			(at 74.168 83.312 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8611,7 +8403,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 69.342 93.98 90)
+			(at 70.612 82.55 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8622,7 +8414,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 93.98 0)
+			(at 72.39 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8633,7 +8425,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 71.12 93.98 0)
+			(at 72.39 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8660,7 +8452,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 73.66 177.8 0)
+		(at 74.93 176.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8669,8 +8461,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9268dfac-d642-476e-ac66-4e9f68225b95")
-		(property "Reference" "100nF5"
-			(at 77.47 176.53 0)
+		(property "Reference" "C"
+			(at 78.74 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8680,8 +8472,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 77.47 179.0699 0)
+		(property "Value" "100nF5"
+			(at 78.74 177.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8692,7 +8484,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 74.6252 181.61 0)
+			(at 75.8952 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8703,7 +8495,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 177.8 0)
+			(at 74.93 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8714,7 +8506,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 73.66 177.8 0)
+			(at 74.93 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8733,7 +8525,7 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "100nF5")
+					(reference "C")
 					(unit 1)
 				)
 			)
@@ -8741,7 +8533,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V0")
-		(at 265.43 88.9 0)
+		(at 255.27 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8752,7 +8544,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f482010-ec8b-414a-8241-d0ddcec18c6a")
 		(property "Reference" "#PWR025"
-			(at 265.43 92.71 0)
+			(at 255.27 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8763,7 +8555,7 @@
 			)
 		)
 		(property "Value" "+3V0"
-			(at 265.43 83.82 0)
+			(at 255.27 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8773,7 +8565,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 265.43 88.9 0)
+			(at 255.27 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8784,7 +8576,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 265.43 88.9 0)
+			(at 255.27 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8795,7 +8587,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 265.43 88.9 0)
+			(at 255.27 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8899,8 +8691,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 77.47 170.18 0)
+		(lib_id "Device:R")
+		(at 100.33 127 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8909,20 +8701,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "aa09688c-e233-4c98-b74f-d06877822196")
-		(property "Reference" "#PWR027"
-			(at 77.47 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 80.01 168.9099 0)
+		(uuid "a46106f5-42d5-496d-9363-7ad97ba31fa5")
+		(property "Reference" "R7"
+			(at 102.87 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8932,8 +8713,19 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 77.47 170.18 0)
+		(property "Value" "3K3"
+			(at 102.87 128.2699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 98.552 127 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8944,7 +8736,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 170.18 0)
+			(at 100.33 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8954,8 +8746,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 77.47 170.18 0)
+		(property "Description" "Resistor"
+			(at 100.33 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8964,14 +8756,96 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "57ee2c29-0d45-428f-b554-e00c9d503d42")
 		)
 		(pin "1"
-			(uuid "c5aff80b-c638-447e-b7e4-63809cde694a")
+			(uuid "8fb1110e-246d-4ebf-a4f9-b7856d0319a4")
 		)
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR027")
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 81.28 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b00e8ea5-ee95-47fb-ba66-7423721e0655")
+		(property "Reference" "SW1"
+			(at 83.058 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 82.804 137.922 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 81.28 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f73bf3eb-a354-40c4-85dd-4b176d7c750c")
+		)
+		(pin "1"
+			(uuid "8f07cdbf-8e32-446e-b6c5-acf4f91aa0ed")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -9069,7 +8943,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b1a9957c-cd01-488f-a7e6-176c5a00bb29")
-		(property "Reference" "10uF1"
+		(property "Reference" "C"
 			(at 260.35 120.6499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9080,7 +8954,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "10uF1"
 			(at 260.35 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9133,7 +9007,85 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "10uF1")
+					(reference "C")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 33.02 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4c52110-9958-47e6-9247-904449525021")
+		(property "Reference" "#PWR03"
+			(at 33.02 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 33.02 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 33.02 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9b893b0-caf9-49ef-9628-43f3cf88c81a")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -9330,8 +9282,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 78.74 90.17 0)
+		(lib_id "Device:LED")
+		(at 91.44 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9339,30 +9291,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c789d2e0-40dc-4aeb-8f1d-f0a4b3760d70")
-		(property "Reference" "#PWR021"
-			(at 78.74 93.98 0)
-			(hide yes)
+		(fields_autoplaced yes)
+		(uuid "cbec4eed-9090-4070-80d6-ea74e1493906")
+		(property "Reference" "D3"
+			(at 95.25 137.4774 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 78.74 86.36 0)
+		(property "Value" "LED"
+			(at 95.25 140.0174 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 78.74 90.17 0)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 91.44 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9373,7 +9327,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 90.17 0)
+			(at 91.44 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9383,8 +9337,89 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 78.74 90.17 0)
+		(property "Description" "Light emitting diode"
+			(at 91.44 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dab8eea2-f279-466b-9855-11d57da85028")
+		)
+		(pin "1"
+			(uuid "b866358d-34f8-475b-a5d3-0ed8e495982b")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V0")
+		(at 72.39 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d38b7a90-3c94-4e28-ae46-525cbcd85ff9")
+		(property "Reference" "#PWR028"
+			(at 72.39 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V0"
+			(at 72.39 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 72.39 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9395,7 +9430,245 @@
 			)
 		)
 		(pin "1"
-			(uuid "558c78e7-8b87-4d14-97a9-39c1b9c22f8f")
+			(uuid "6f82ffc7-2e6d-4f09-adc2-d06622c41ab0")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V0")
+		(at 92.71 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5e84e6f-3b7e-404f-9e94-0fe27f39baef")
+		(property "Reference" "#PWR027"
+			(at 92.71 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V0"
+			(at 92.71 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 92.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea7b6d71-d929-480b-99f7-2a8faddce6bb")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 72.39 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6f17fdd-853f-4347-a517-7d8c914b4d0a")
+		(property "Reference" "C7"
+			(at 76.2 157.4799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 76.2 160.0199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.3552 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 72.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "97cab1e7-fd8f-4518-b82e-562dbe6abca0")
+		)
+		(pin "1"
+			(uuid "7c1b8255-34f2-4706-9dfd-585886f8238e")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 72.39 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d96c7f3c-a32c-40c0-a8a5-933b456a55db")
+		(property "Reference" "#PWR021"
+			(at 72.39 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 72.39 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 72.39 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e4faa550-45b4-4c99-ae2e-fd4d3c97450a")
 		)
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
@@ -9407,321 +9680,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 224.79 43.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d209b65e-b4cd-4ac9-a1e5-99dd1c5806f4")
-		(property "Reference" "#PWR08"
-			(at 224.79 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 224.79 39.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 224.79 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ece241dd-e24e-4ddf-ac19-917cc1ceda69")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 113.03 43.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d3904984-aec2-4067-97d3-a142abbd02b3")
-		(property "Reference" "#PWR016"
-			(at 113.03 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 113.03 39.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 113.03 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "01b885b7-aaba-4df7-bf66-3f0b88105b52")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 196.85 109.22 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d453ec27-b03d-4adc-8c4f-9cded2fd2dba")
-		(property "Reference" "3K3"
-			(at 199.39 107.9499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 199.39 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 195.072 109.22 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 196.85 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 196.85 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b8de4418-88d9-460f-a886-0dd042d529ec")
-		)
-		(pin "2"
-			(uuid "02e80114-0c27-43f5-820f-4c001189241a")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "3K3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 71.12 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d65a5e86-1330-441d-8cae-b1ce3b4bdafe")
-		(property "Reference" "#PWR022"
-			(at 71.12 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 71.628 86.36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 71.12 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 71.12 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 71.12 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "49c68230-60d8-4aa5-8505-9ae1d61c3ca1")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 41.91 177.8 180)
+		(at 43.18 176.53 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9730,8 +9690,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dacdc548-4ce3-4f81-a4f6-8ab676619ca2")
-		(property "Reference" "100nF2"
-			(at 38.1 179.0701 0)
+		(property "Reference" "C"
+			(at 39.624 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9741,8 +9701,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 38.1 176.5301 0)
+		(property "Value" "100nF2"
+			(at 40.132 177.546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9753,7 +9713,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 40.9448 173.99 0)
+			(at 42.2148 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9764,7 +9724,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 177.8 0)
+			(at 43.18 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9775,7 +9735,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 41.91 177.8 0)
+			(at 43.18 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9794,7 +9754,89 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "100nF2")
+					(reference "C")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 72.39 138.43 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de30f401-076a-457c-9320-cebc2cb5c727")
+		(property "Reference" "R3"
+			(at 74.93 137.1599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 74.93 139.6999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 70.612 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 72.39 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c5379fdf-7eae-40ed-917c-ebe5e811775e")
+		)
+		(pin "2"
+			(uuid "b2d228b0-9d1b-4bcd-bf5f-4be20afcf5e0")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -9882,8 +9924,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 55.88 50.8 0)
+		(lib_id "power:+3V0")
+		(at 208.28 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9891,31 +9933,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e6454b57-3352-43c8-98cf-7a7411912209")
-		(property "Reference" "C5"
-			(at 50.292 49.53 0)
+		(fields_autoplaced yes)
+		(uuid "e474d140-c1c9-462d-8cd3-073dd5301ffe")
+		(property "Reference" "#PWR030"
+			(at 208.28 53.34 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 49.784 51.562 0)
+		(property "Value" "+3V0"
+			(at 208.28 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 56.8452 54.61 0)
+		(property "Footprint" ""
+			(at 208.28 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9926,7 +9968,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 50.8 0)
+			(at 208.28 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 208.28 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a940350d-e12e-49a9-b8f2-99a493397d6c")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 72.39 44.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e6454b57-3352-43c8-98cf-7a7411912209")
+		(property "Reference" "C5"
+			(at 66.802 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 66.294 45.212 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 73.3552 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9937,7 +10057,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 55.88 50.8 0)
+			(at 72.39 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9964,7 +10084,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:MIC5365-3.3YD5")
-		(at 74.93 46.99 0)
+		(at 91.44 40.64 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9975,7 +10095,7 @@
 		(fields_autoplaced yes)
 		(uuid "ea61350c-c2ec-4e45-9d13-12ee2a055979")
 		(property "Reference" "U4"
-			(at 74.93 36.83 0)
+			(at 91.44 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9985,7 +10105,7 @@
 			)
 		)
 		(property "Value" "MIC5365-3.3YD5"
-			(at 74.93 39.37 0)
+			(at 91.44 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9995,7 +10115,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 74.93 38.1 0)
+			(at 91.44 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10006,7 +10126,7 @@
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/mic5365.pdf"
-			(at 68.58 40.64 0)
+			(at 85.09 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10017,7 +10137,7 @@
 			)
 		)
 		(property "Description" "150mA Low-dropout Voltage Regulator, Vout 3.3V, Vin up to 5.5V, SOT-23-5"
-			(at 74.93 46.99 0)
+			(at 91.44 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10052,6 +10172,167 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 91.44 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f04dcde1-aeff-4959-a023-a30107887066")
+		(property "Reference" "#PWR016"
+			(at 91.44 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 91.44 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d1f64672-1aa9-45e8-bca0-b12907645a07")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 135.89 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f11994be-affd-4ae6-b9fb-fee65061851a")
+		(property "Reference" "D4"
+			(at 104.14 136.2074 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 104.14 138.7474 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 100.33 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 100.33 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d11428af-b7f0-4391-84ad-02cd3ae8f5af")
+		)
+		(pin "1"
+			(uuid "838099d4-a283-4314-b4f0-8966a842f513")
+		)
+		(instances
+			(project "CTS-SAT-2-Magnetometer-Module"
+				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 191.77 115.57 0)
 		(mirror y)
@@ -10062,28 +10343,27 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f13c7f42-5d35-4cab-a0ea-631cd74a8fe0")
-		(property "Reference" "1uF1"
-			(at 187.96 114.2999 0)
+		(property "Reference" "C"
+			(at 186.182 114.046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "C"
-			(at 187.96 116.8399 0)
+		(property "Value" "1uF1"
+			(at 183.388 116.332 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
@@ -10128,7 +10408,7 @@
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "1uF1")
+					(reference "C")
 					(unit 1)
 				)
 			)
@@ -10136,7 +10416,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 55.88 55.88 0)
+		(at 72.39 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10147,7 +10427,7 @@
 		(fields_autoplaced yes)
 		(uuid "f30f80dc-415e-41e4-b46e-0b3657ed6d3e")
 		(property "Reference" "#PWR02"
-			(at 55.88 62.23 0)
+			(at 72.39 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10158,7 +10438,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 55.88 60.96 0)
+			(at 72.39 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10169,7 +10449,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 55.88 0)
+			(at 72.39 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10180,7 +10460,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 55.88 0)
+			(at 72.39 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10191,7 +10471,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 55.88 55.88 0)
+			(at 72.39 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10214,8 +10494,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 194.31 49.53 0)
+		(lib_id "power:GND")
+		(at 100.33 142.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10223,9 +10503,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fcb704cb-6b65-4597-bc3c-7c85c500dd2a")
-		(property "Reference" "#PWR05"
-			(at 194.31 53.34 0)
+		(fields_autoplaced yes)
+		(uuid "f4837f45-fe81-41b7-abc4-3dd012338d24")
+		(property "Reference" "#PWR022"
+			(at 100.33 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10235,8 +10516,9 @@
 				)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 194.31 45.72 0)
+		(property "Value" "GND"
+			(at 100.33 147.32 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10246,7 +10528,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 49.53 0)
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10257,7 +10539,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 49.53 0)
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10267,8 +10549,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 194.31 49.53 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10279,94 +10561,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "774953ed-b9ce-44b3-9914-8d1d44bc40c6")
+			(uuid "30409ae2-71f6-4616-b781-1b31d785125c")
 		)
 		(instances
 			(project "CTS-SAT-2-Magnetometer-Module"
 				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 254 96.52 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fe9b8cd6-abbd-4e00-8c33-27f80c37b897")
-		(property "Reference" "10k2"
-			(at 256.54 95.2499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "R"
-			(at 256.54 97.7899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 255.778 96.52 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 254 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "af90205c-b398-48e2-a87d-20a9cbf29758")
-		)
-		(pin "1"
-			(uuid "1dce2d07-b3bd-465f-877e-4b7bb23e2127")
-		)
-		(instances
-			(project "CTS-SAT-2-Magnetometer-Module"
-				(path "/c009ac64-8176-4e92-bfe3-b763ec3b9dfb"
-					(reference "10k2")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
