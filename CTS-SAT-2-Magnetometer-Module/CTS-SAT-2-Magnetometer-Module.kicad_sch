@@ -5595,7 +5595,7 @@
 			)
 		)
 	)
-	(global_label "3V3"
+	(global_label "+3V3"
 		(shape input)
 		(at 148.59 123.19 180)
 		(fields_autoplaced yes)
@@ -5607,7 +5607,7 @@
 		)
 		(uuid "57e54974-9e2b-4514-9717-ba8d7e917f90")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 142.0972 123.19 0)
+			(at 140.5248 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5859,7 +5859,7 @@
 			)
 		)
 	)
-	(global_label "3V3"
+	(global_label "+3V3"
 		(shape input)
 		(at 149.86 100.33 180)
 		(fields_autoplaced yes)
@@ -5871,7 +5871,7 @@
 		)
 		(uuid "bb9aa1bd-57ec-46e7-b306-5d4073b911b3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 143.3672 100.33 0)
+			(at 141.7948 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
